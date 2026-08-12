@@ -1,0 +1,189 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600&display=swap");
+
+@theme {
+  /* =========================
+     COLORS
+     ========================= */
+
+  --color-surface: #f7f9ff;
+  --color-surface-dim: #d5dae2;
+  --color-surface-bright: #f7f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4fc;
+  --color-surface-container: #e9eef6;
+  --color-surface-container-high: #e3e9f0;
+  --color-surface-container-highest: #dde3eb;
+
+  --color-on-surface: #161c22;
+  --color-on-surface-variant: #434843;
+
+  --color-inverse-surface: #2b3137;
+  --color-inverse-on-surface: #ecf1f9;
+
+  --color-outline: #737872;
+  --color-outline-variant: #c3c8c1;
+
+  --color-surface-tint: #506353;
+
+  /* Primary - Sage Green */
+  --color-primary: #465949;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #5e7161;
+  --color-on-primary-container: #dff5e0;
+
+  /* Secondary - Slate Blue */
+  --color-secondary: #4f6072;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d2e4fa;
+  --color-on-secondary-container: #556678;
+
+  /* Tertiary - Warm Taupe */
+  --color-tertiary: #58544d;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #716c65;
+  --color-on-tertiary-container: #f6eee6;
+
+  /* Error */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Background */
+  --color-background: #f7f9ff;
+  --color-on-background: #161c22;
+
+  /* =========================
+     TYPOGRAPHY
+     ========================= */
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* =========================
+     BORDER RADIUS
+     ========================= */
+
+  --radius-sm: 0.25rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* =========================
+     SPACING
+     ========================= */
+
+  --spacing-xs: 4px;
+  --spacing-sm: 12px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 80px;
+
+  /* =========================
+     SHADOWS
+     ========================= */
+
+  --shadow-card: 0 4px 20px rgba(79, 96, 114, 0.15);
+  --shadow-modal: 0 10px 40px rgba(79, 96, 114, 0.2);
+}
+
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+
+:root {
+  font-family: var(--font-inter);
+  color: #161c22;
+  background-color: #f7f9ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f7f9ff;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   TYPOGRAPHY UTILITIES
+   ========================= */
+
+.display-lg {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+}
+
+.headline-md {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.body-lg {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.body-md {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.label-sm {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.caption {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* =========================
+   RESPONSIVE TYPOGRAPHY
+   ========================= */
+
+@media (max-width: 768px) {
+  .display-lg {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+  }
+}
