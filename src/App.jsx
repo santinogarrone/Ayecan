@@ -1,11 +1,18 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Institucion from "./pages/Institucion";
+import Propuesta from "./pages/Propuesta";
+
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/institucion" element={<Institucion />} />
+        <Route path="/propuesta" element={<Propuesta />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

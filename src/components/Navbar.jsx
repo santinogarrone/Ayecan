@@ -1,47 +1,48 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <header className=" bg-surface">
-      <nav className="mx-auto flex max-w-7xl justify-between py-6">
+      <nav className="mx-auto flex max-w-[1600px] justify-between py-6 items-center">
         <a href="#" className=" text-3xl font-display text-primary">
           Ayecan
         </a>
 
-        <div className="gap-10 md:flex">
-          <a
-            href="#inicio"
-            className="text-xl text-on-surface-variant hover:text-primary"
+        <div className="flex items-center gap-6">
+          <Link
+            to="/"
+            className="text-xl text-on-surface-variant link-underline"
           >
             Inicio
-          </a>
+          </Link>
 
-          <a
-            href="#institucion"
-            className="text-xl text-on-surface-variant hover:text-primary"
+          <Link
+            to="/institucion"
+            className="text-xl text-on-surface-variant link-underline"
           >
             Nuestra institución
-          </a>
+          </Link>
 
-          <a
-            href="#propuesta"
-            className="text-xl text-on-surface-variant hover:text-primary"
+          <Link
+            to="/propuesta"
+            className="text-xl text-on-surface-variant link-underline"
           >
             Propuesta
-          </a>
+          </Link>
 
-          <a
-            href="#equipo"
-            className="text-xl text-on-surface-variant hover:text-primary"
+          <Link
+            to="/equipo"
+            className="text-xl text-on-surface-variant link-underline"
           >
             Equipo
-          </a>
+          </Link>
+          <Link
+            to="/contacto"
+            className="rounded-lg bg-primary px-5 py-3 text-xl font-medium text-on-primary transition-shadow hover:shadow-card btn-primary"
+          >
+            Contáctanos
+          </Link>
         </div>
-
-        <a
-          href="#contacto"
-          className="rounded-lg bg-primary px-5 py-3 text-xl font-medium text-on-primary transition-shadow hover:shadow-card"
-        >
-          Contáctanos
-        </a>
       </nav>
     </header>
   );
